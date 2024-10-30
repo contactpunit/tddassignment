@@ -8,4 +8,8 @@ describe('Calculator', () => {
     test("2. return single number which is passed as string", () => {
         expect(calculator("20")).toBe(20);
     });
+
+    test("3. return sum of multiple numbers passed", () => {
+        expect(calculator("20,30,50")).toBe(100);
+    });
 })
