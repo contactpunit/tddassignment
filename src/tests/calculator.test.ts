@@ -17,7 +17,11 @@ describe('Calculator', () => {
         expect(calculator("20,30,abcd,50")).toBe(100);
     });
 
-    test("4. allow \n as a delimiter", () => {
+    test("5. allow \n as a delimiter", () => {
         expect(calculator("20,30\n50")).toBe(100);
+    });
+
+    test("6. allow \n as a delimiter with NaN characters", () => {
+        expect(calculator("20,30\nabcd,50")).toBe(100);
     });
 })
