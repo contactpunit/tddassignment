@@ -1,0 +1,29 @@
+{
+  "name": "tddassignment",
+  "version": "1.0.0",
+  "description": "tdd to designa  custom calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contactpunit/tddassignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/contactpunit/tddassignment/issues"
+  },
+  "homepage": "https://github.com/contactpunit/tddassignment#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.13.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3"
+  }
+}
