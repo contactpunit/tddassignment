@@ -13,7 +13,11 @@ describe('Calculator', () => {
         expect(calculator("20,30,50")).toBe(100);
     });
 
-    test("4. return sum of multiple numbers passed", () => {
+    test("4. handle case of NAN", () => {
         expect(calculator("20,30,abcd,50")).toBe(100);
+    });
+
+    test("4. allow \n as a delimiter", () => {
+        expect(calculator("20,30\n50")).toBe(100);
     });
 })

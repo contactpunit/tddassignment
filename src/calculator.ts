@@ -4,7 +4,7 @@ export function calculator(stringInput: CalcInput) {
     if (!stringInput) return 0
     else {
         if (!stringInput.startsWith('//')) {
-            const parts = stringInput.split(',')
+            const parts = stringInput.split(/[\n,]/)
             const numbers = (parts.map(part => +part)).filter(num => !isNaN(num))
             return numbers.reduce((accum, currValue) => {
                 return accum + currValue
