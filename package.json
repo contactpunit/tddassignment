@@ -2,11 +2,11 @@
   "name": "tddassignment",
   "version": "1.0.0",
   "description": "tdd to designa  custom calculator",
-  "main": "index.js",
+  "main": "calculator.js",
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/calculator.js"
   },
   "repository": {
     "type": "git",
