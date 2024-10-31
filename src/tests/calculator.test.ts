@@ -26,6 +26,6 @@ describe('Calculator', () => {
     });
 
     test("7. -ve numbers should throw an exception", () => {
-        expect(calculator("20,30\nabcd,-50")).toBe(100);
+        expect(() => { calculator("20,30,-50") }).toThrow('negative numbers not allowed -50')
     });
 })
