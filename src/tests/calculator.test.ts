@@ -32,4 +32,8 @@ describe('Calculator', () => {
     test(`8. handle change in delimitter using "//;" with input "1;2"`, () => {
         expect(calculator("//;\n1;2")).toBe(3)
     });
+
+    test(`9. handle change in delimitter using "//;" with input "1;2"`, () => {
+        expect(calculator("//;\n1;2,45;766")).toBe(814)
+    });
 })
