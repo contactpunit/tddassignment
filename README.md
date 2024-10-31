@@ -1,6 +1,6 @@
 # String Calculator TDD Kata
 
-This is a test driven development project in typeascript and nodejs
+This is a test driven development project in typescript and nodejs
 
 ## Table of Contents
 
