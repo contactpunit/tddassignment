@@ -36,4 +36,8 @@ describe('Calculator', () => {
     test(`9. handle change in delimitter using "//;" with input "1;2"`, () => {
         expect(calculator("//;\n1;2,45;766")).toBe(814)
     });
+
+    test(`10. handle multiple -ve numbers`, () => {
+        expect(() => { calculator("20,30,-50, -80") }).toThrow('negative numbers not allowed -50,-80')
+    });
 })

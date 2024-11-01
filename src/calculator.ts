@@ -1,7 +1,7 @@
 import { CalcInput } from "./lib/types";
 
 
-function calculateSum(stringInput: CalcInput, regex: RegExp) {
+function calculateSum(stringInput: CalcInput, regex: RegExp): number {
     const parts = stringInput.split(regex)
     const numbers = (parts.map(part => +part)).filter(num => !isNaN(num))
     const negNumbers = numbers.filter(num => num < 0)
@@ -15,23 +15,13 @@ function calculateSum(stringInput: CalcInput, regex: RegExp) {
 
 export function calculator(stringInput: CalcInput) {
     if (!stringInput) return 0
-    else {
-        if (!stringInput.startsWith('//')) {
-            const regex = new RegExp(/[\n,]/)
-            return calculateSum(stringInput, regex)
-        } else {
-            let delimiter: string | undefined
-            const matches = stringInput.match(/(?<=\/\/)(.)/);
-            if (matches && matches.length) {
-                delimiter = matches[1]
-                if (delimiter) {
-                    const stringToParse = stringInput.slice(3)
-                    const regex = new RegExp(`[${delimiter},\n]`)
-                    return calculateSum(stringToParse, regex)
-                } else {
-                    return 0
-                }
-            } else return 0
-        }
-    }
+    const regex = stringInput.startsWith('//')
+        ? new RegExp(`[${stringInput[2]},\n]`)
+        : /[\n,]/
+
+    const stringToParse = stringInput.startsWith('//')
+        ? stringInput.slice(3)
+        : stringInput
+
+        return calculateSum(stringToParse, regex)
 }
